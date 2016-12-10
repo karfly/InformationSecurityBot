@@ -1,0 +1,13 @@
+${full_name}
+Ты ${position}-й из ${n_students}-х студентов (автомат получают первые ${n_students_with_auto_exam_pass}).
+
+K1: ${test_1}
+K2: ${test_2}
+K3: ${test_3}
+K4: ${test_4}
+K5: ${test_5}
+
+Эссе: ${essay}
+Проект: ${project}
+
+Автомат: ${auto_exam_pass}
