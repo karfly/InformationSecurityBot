@@ -36,7 +36,7 @@ class InformationSecurityBot(telepot.helper.ChatHandler):
 
 if __name__ == '__main__':
     with open('.information_security_bot_token') as fin:
-        token = fin.read()
+        token = fin.read().strip()
 
     bot = telepot.DelegatorBot(token, [
         pave_event_space()(
