@@ -40,12 +40,19 @@ class PersonInfoRetriever(object):
             'n_students_with_auto_exam_pass': len(tr_tags) // 3
         }
 
+        n_students_with_auto_exam_pass_before = 0
+
         for position, table_line in enumerate(tr_tags):
             info.update(PersonInfoRetriever.parse_table_line(table_line))
             info['position'] = position + 1
 
-            if full_name in info['full_name']:
+            if info['full_name'].startswith(full_name):
+                info['n_students_with_auto_exam_pass_before'] = n_students_with_auto_exam_pass_before
                 return info
+
+            print(info['auto_exam_pass'])
+            if info['auto_exam_pass'] == 'ИСТИНА':
+                n_students_with_auto_exam_pass_before += 1
 
         return None
 

@@ -1,5 +1,6 @@
 ${full_name}
 Ты ${position}-й из ${n_students}-х студентов (автомат получают первые ${n_students_with_auto_exam_pass}).
+Перед тобой ${n_students_with_auto_exam_pass_before} с автоматами.
 
 K1: ${test_1}
 K2: ${test_2}
