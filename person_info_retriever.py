@@ -50,7 +50,6 @@ class PersonInfoRetriever(object):
                 info['n_students_with_auto_exam_pass_before'] = n_students_with_auto_exam_pass_before
                 return info
 
-            print(info['auto_exam_pass'])
             if info['auto_exam_pass'] == 'ИСТИНА':
                 n_students_with_auto_exam_pass_before += 1
 
