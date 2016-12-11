@@ -7,11 +7,10 @@ from person_info_retriever import PersonInfoRetriever
 # Logging
 import logging
 
-logging.basicConfig(filename='log', filemode='a',
+logging.basicConfig(filename='log.log', filemode='a',
                     format='%(asctime)s %(message)s', datefmt='%H:%M:%S',
                     level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler())
-
 
 
 class InformationSecurityBot(telepot.helper.ChatHandler):
@@ -26,6 +25,7 @@ class InformationSecurityBot(telepot.helper.ChatHandler):
         content_type, chat_type, chat_id = telepot.glance(msg)
         if content_type == 'text':
             text = msg['text']
+            logging.info('Chat id: {} | Message: {}'.format(chat_id, text))
 
             if text == '/start start' or text == '/start':
                 self.sender.sendMessage(self.start_message)
