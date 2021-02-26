@@ -1,4 +1,4 @@
-aiohttp==1.1.6
+aiohttp==3.7.4
 async-timeout==1.1.0
 beautifulsoup4==4.5.1
 chardet==2.3.0
